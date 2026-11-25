@@ -1,0 +1,237 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f3ff;
+    color: #252044;
+}
+
+header {
+    background: #24154d;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    color: #ff9b80;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff9b80;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #38216d, #8054b8);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff9478;
+    color: #24154d;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: #ffb09b;
+}
+
+section {
+    padding: 60px 8%;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 30px;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.event-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.event-card h3 {
+    color: #6842a5;
+    margin-bottom: 15px;
+}
+
+.event-card p {
+    margin: 12px 0;
+    color: #555;
+}
+
+#booking {
+    background: #eee8fa;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+input, select {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #8054b8;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #6842a5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4b2b83;
+}
+
+footer {
+    background: #24154d;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav a {
+        margin: 8px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+.success-message {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 18px;
+    background: #dff8e7;
+    color: #16763b;
+    border: 1px solid #a5e6bb;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: #6842a5;
+    color: white;
+    padding: 15px;
+}
+
+td {
+    padding: 13px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background: #f5f0ff;
+}
+
+td button {
+    padding: 9px 12px;
+    margin: 3px 0;
+    font-size: 13px;
+}
+
+.dashboard {
+    min-height: 80vh;
+    background: #f5f3ff;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 35px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    border-bottom: 4px solid #8054b8;
+}
+
+.dashboard-card h3 {
+    color: #6842a5;
+    margin-bottom: 20px;
+}
+
+.dashboard-card h1 {
+    font-size: 40px;
+    color: #24154d;
+}
