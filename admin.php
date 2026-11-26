@@ -35,10 +35,14 @@ $recentBookings = $pdo->query("
 <body>
 
 <header>
-    <h2>EventHub Admin</h2>
+    <h2>EventHub</h2>
+
     <nav>
         <a href="index.php">Home</a>
-        <a href="bookings.php">Manage Bookings</a>
+        <a href="index.php#events">Events</a>
+        <a href="bookings.php">Bookings</a>
+        <a href="admin.php">Dashboard</a>
+        <a href="manage_events.php">Manage Events</a>
     </nav>
 </header>
 

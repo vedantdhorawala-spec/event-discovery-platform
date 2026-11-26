@@ -1,5 +1,6 @@
 
 <?php
+session_start();
 require 'db.php';
 
 $stmt = $pdo->prepare("SELECT * FROM events ORDER BY id DESC");
@@ -17,12 +18,28 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <header>
     <h2>EventHub</h2>
+
     <nav>
         <a href="index.php">Home</a>
         <a href="#events">Events</a>
-        <a href="#booking">Book Tickets</a>
-        <a href="bookings.php">View Bookings</a>
-        <a href="admin.php">Admin Dashboard</a>
+        <a href="bookings.php">Bookings</a>
+        <a href="admin.php">Dashboard</a>
+        <a href="manage_events.php">Manage Events</a>
+
+        <?php if (isset($_SESSION['user_id'])) { ?>
+
+            <span class="profile-name">
+                <?php echo htmlspecialchars($_SESSION['user_name']); ?>
+            </span>
+
+            <a href="logout.php">Logout</a>
+
+        <?php } else { ?>
+
+            <a href="login.php">Login</a>
+            <a href="register.php">Register</a>
+
+        <?php } ?>
     </nav>
 </header>
 
@@ -66,7 +83,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <?php if (isset($_GET['booking']) && $_GET['booking'] == 'success') { ?>
     <div class="success-message">
-         Booking Successfully Done!
+        Booking Successfully Done!
     </div>
 <?php } ?>
 
